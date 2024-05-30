@@ -1,0 +1,10 @@
+/home/marty/risc0fib/target/debug/deps/libark_relations-aec998fa714cf801.rmeta: /home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/lib.rs /home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/r1cs/mod.rs /home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/r1cs/impl_lc.rs /home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/r1cs/constraint_system.rs /home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/r1cs/error.rs /home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/r1cs/trace.rs
+
+/home/marty/risc0fib/target/debug/deps/ark_relations-aec998fa714cf801.d: /home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/lib.rs /home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/r1cs/mod.rs /home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/r1cs/impl_lc.rs /home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/r1cs/constraint_system.rs /home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/r1cs/error.rs /home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/r1cs/trace.rs
+
+/home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/lib.rs:
+/home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/r1cs/mod.rs:
+/home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/r1cs/impl_lc.rs:
+/home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/r1cs/constraint_system.rs:
+/home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/r1cs/error.rs:
+/home/marty/.cargo/registry/src/index.crates.io-6f17d22bba15001f/ark-relations-0.4.0/src/r1cs/trace.rs:

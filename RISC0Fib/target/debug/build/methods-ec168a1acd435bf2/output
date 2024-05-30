@@ -1,0 +1,8 @@
+Building guest package methods.fib
+cargo:rerun-if-env-changed=RISC0_SKIP_BUILD
+Using rustc: /home/marty/.rustup/toolchains/risc0/bin/rustc
+cargo:rerun-if-env-changed=RISC0_RUST_SRC
+Building guest package: cargo build --target riscv32im-risc0-zkvm-elf
+cargo:rerun-if-env-changed=RISC0_BUILD_DEBUG
+cargo:rerun-if-env-changed=RISC0_BUILD_DEBUG
+cargo:rerun-if-changed=/home/marty/risc0fib/target/debug/build/methods-ec168a1acd435bf2/out/methods.rs
