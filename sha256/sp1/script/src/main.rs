@@ -9,13 +9,13 @@ fn main() {
     let stdin = SP1Stdin::new();
     let client = ProverClient::new();
     let (pk, vk) = client.setup(ELF);
-    let mut proof = client.prove(&pk, stdin).expect("proving failed");
-    
+    let mut proof = client.prove(&pk, stdin).run().expect("proving failed");
+
     // Read and verify the output.
     let hash = proof.public_values.read::<String>();
 
     println!("hash: {}", hash);
-    
+
     // Verify proof.
     client.verify(&proof, &vk).expect("verification failed");
 
