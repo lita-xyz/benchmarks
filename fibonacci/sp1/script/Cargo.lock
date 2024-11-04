@@ -1619,7 +1619,7 @@ checksum = "28dea519a9695b9977216879a3ebfddf92f1c08c05d984f8996aecd6ecdc811d"
 name = "fibonacci-script"
 version = "0.1.0"
 dependencies = [
- "sp1-helper",
+ "sp1-build",
  "sp1-sdk",
 ]
 
@@ -4463,7 +4463,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "sp1-helper"
+name = "sp1-build"
 version = "0.1.0"
 source = "git+https://github.com/succinctlabs/sp1.git?rev=v1.0.8-testnet#14eb569d41d24721ffbd407d6060e202482d659c"
 dependencies = [
