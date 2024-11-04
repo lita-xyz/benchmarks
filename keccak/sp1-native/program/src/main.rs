@@ -15,7 +15,7 @@ fn keccak(input: &[u8]) -> [u8; 32] {
 pub fn main() {
     let input: &[u8] = &[5u8; 32];
     let output = keccak(input);
+    
     let output_hex = hex::encode(output);
-
     sp1_zkvm::io::commit(&output_hex);
 }
