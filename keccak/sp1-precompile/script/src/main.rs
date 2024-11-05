@@ -21,6 +21,8 @@ fn main() {
         .with(ForestLayer::default())
         .init();
 
+    let _timer = info_span!("main").entered();
+
     // Generate proof.
     let stdin = SP1Stdin::new();
     let client = ProverClient::new();
