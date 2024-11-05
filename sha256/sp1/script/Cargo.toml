@@ -6,12 +6,14 @@ edition = "2021"
 
 [dependencies]
 sp1-sdk = { git = "https://github.com/succinctlabs/sp1.git", tag = "v3.0.0" }
-tracing = "0.1.37"
-tracing-subscriber = { version = "0.3.17", features = ["std", "env-filter"] }
-tracing-forest = { version = "0.1.6", features = ["ansi", "smallvec"] }
+ark-std = "0.4"
 
 [build-dependencies]
 sp1-build = { git = "https://github.com/succinctlabs/sp1.git", tag = "v3.0.0"  }
 
 [patch.crates-io]
 sha2-v0-10-8 = { git = "https://github.com/sp1-patches/RustCrypto-hashes", package = "sha2", branch = "patch-v0.10.8" }
+
+[features]
+print-timers = ["ark-std/print-trace"]
+default = ["print-timers"]

@@ -1,43 +1,28 @@
 //! A simple script to generate and verify the proof of a given program.
 
+use ark_std::{end_timer, start_timer};
 use sp1_sdk::{ProverClient, SP1Stdin};
-use tracing::info_span;
-use tracing_forest::util::LevelFilter;
-use tracing_forest::ForestLayer;
-use tracing_subscriber::layer::SubscriberExt;
-use tracing_subscriber::util::SubscriberInitExt;
-use tracing_subscriber::{EnvFilter, Registry};
 
 const ELF: &[u8] = include_bytes!("../../program/elf/riscv32im-succinct-zkvm-elf");
 
 fn main() {
-    // Tracing
-    let env_filter = EnvFilter::builder()
-        .with_default_directive(LevelFilter::INFO.into())
-        .from_env_lossy();
-
-    Registry::default()
-        .with(env_filter)
-        .with(ForestLayer::default())
-        .init();
-
-    let _timer = info_span!("main").entered();
-
     // Generate proof.
     let stdin = SP1Stdin::new();
     let client = ProverClient::new();
     let (pk, vk) = client.setup(ELF);
-    let mut proof = info_span!("client.prove(..)")
-        .in_scope(|| client.prove(&pk, stdin).run().expect("proving failed"));
-    
+    let t_prove = start_timer!(|| "SP1 native: Keccak prove");
+    let mut proof = client.prove(&pk, stdin).run().expect("proving failed");
+    end_timer!(t_prove);
+
     // Read and verify the output.
     let hash = proof.public_values.read::<String>();
 
     println!("hash: {}", hash);
-    
+
     // Verify proof.
-    info_span!("client.verify(..)")
-        .in_scope(|| client.verify(&proof, &vk).expect("verification failed"));
+    let t_verify = start_timer!(|| "SP1 native: Keccak verify");
+    client.verify(&proof, &vk).expect("verification failed");
+    end_timer!(t_verify);
 
     // Save proof.
     proof

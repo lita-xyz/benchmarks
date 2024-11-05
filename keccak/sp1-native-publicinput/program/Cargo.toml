@@ -1,7 +1,7 @@
 [workspace]
 [package]
 version = "0.1.0"
-name = "keccak-native-program"
+name = "keccak-native-publicinput-program"
 edition = "2021"
 
 [dependencies]

@@ -2667,7 +2667,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "keccak-precompile-script"
+name = "keccak-native-publicinput-script"
 version = "0.1.0"
 dependencies = [
  "ark-std 0.4.0",
@@ -4563,7 +4563,8 @@ dependencies = [
 [[package]]
 name = "sha3"
 version = "0.10.8"
-source = "git+https://github.com/sp1-patches/RustCrypto-hashes?branch=patch-v0.10.8#1f224388fdede7cef649bce0d63876d1a9e3f515"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "75872d278a8f37ef87fa0ddbda7802605cb18344497949862c0d4dcb291eba60"
 dependencies = [
  "digest 0.10.7",
  "keccak",

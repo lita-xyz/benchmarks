@@ -98,7 +98,7 @@ dependencies = [
 ]
 
 [[package]]
-name = "keccak-native-program"
+name = "keccak-native-publicinput-program"
 version = "0.1.0"
 dependencies = [
  "hex",
