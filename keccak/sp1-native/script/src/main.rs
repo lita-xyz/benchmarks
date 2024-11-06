@@ -10,7 +10,7 @@ fn main() {
     let stdin = SP1Stdin::new();
     let client = ProverClient::new();
     let (pk, vk) = client.setup(ELF);
-    let t_prove = start_timer!(|| "SP1 native: SHA256 prove");
+    let t_prove = start_timer!(|| "SP1 native: Keccak prove");
     let mut proof = client.prove(&pk, stdin).run().expect("proving failed");
     end_timer!(t_prove);
 
@@ -20,7 +20,7 @@ fn main() {
     println!("hash: {}", hash);
 
     // Verify proof.
-    let t_verify = start_timer!(|| "SP1 native: SHA256 verify");
+    let t_verify = start_timer!(|| "SP1 native: Keccak verify");
     client.verify(&proof, &vk).expect("verification failed");
     end_timer!(t_verify);
 
