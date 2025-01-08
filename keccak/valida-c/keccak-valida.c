@@ -1,15 +1,15 @@
 #include "keccak-tiny.h"
 typedef unsigned char byte;
 
-#ifdef __DELENDUM__
+#ifdef __VALIDA__
 const unsigned EOF = 0xFFFFFFFF;
 #else
 #include <stdio.h>
 #endif
 
 static inline byte read_byte_from_stdin() {
-#ifdef __DELENDUM__
-  return __builtin_delendum_read_advice();
+#ifdef __VALIDA__
+  return __builtin_valida_read_advice();
 #else
   return getc(stdin);
 #endif
@@ -30,8 +30,8 @@ int read_stdin_into(byte *buf, int buflen) {
 }
 
 static inline void write_char_to_stdout(char c) {
-#ifdef __DELENDUM__
-  __builtin_delendum_write(c);
+#ifdef __VALIDA__
+  __builtin_valida_write(c);
 #else
   putc(c, stdout);
 #endif

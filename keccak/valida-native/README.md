@@ -25,7 +25,7 @@ cargo +valida build --release
 To run the program, in the Valida shell, from the root directory of this repo:
 
 ```
-valida> valida run ./target/delendum-unknown-baremetal-gnu/release/keccak log
+valida> valida run ./target/valida-unknown-baremetal-gnu/release/keccak log
 ```
 
 The `run` command runs the program and prints the keccak digest to the console and the file `log` in the current directory.
@@ -33,5 +33,5 @@ The `run` command runs the program and prints the keccak digest to the console a
 To prove the program, in the Valida shell, from the root directory of this repo:
 
 ```
-valida> valida prove ./target/delendum-unknown-baremetal-gnu/release/keccak log
+valida> valida prove ./target/valida-unknown-baremetal-gnu/release/keccak log
 ```
