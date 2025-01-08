@@ -9,7 +9,7 @@ int main () {
     a = b;
     b = sum;
     };
-  __builtin_delendum_write(a);
-  __builtin_delendum_write(b);
+  __builtin_valida_write(a);
+  __builtin_valida_write(b);
   return 0;
   }

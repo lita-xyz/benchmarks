@@ -20,7 +20,7 @@
 /****************************** MACROS ******************************/
 #define SHA256_BLOCK_SIZE 32            // SHA256 outputs a 32 byte digest
 
-#ifdef __DELENDUM__
+#ifdef __VALIDA__
 #define size_t unsigned int
 #else
 #include <stddef.h>
@@ -185,7 +185,7 @@ void sha256_final(SHA256_CTX *ctx, WORD hash[])
 
 #define BUF_LEN 256
 
-#ifdef __DELENDUM__
+#ifdef __VALIDA__
 const unsigned EOF = 0xFFFFFFFF;
 #else
 #include <stdio.h>
@@ -206,8 +206,8 @@ int main() {
 
     sha256_final(&ctx, hash);
     for (size_t i = 0; i < SHA256_BLOCK_SIZE; i++) {
-#ifdef __DELENDUM__
-        __builtin_delendum_write(hash[i]);
+#ifdef __VALIDA__
+        __builtin_valida_write(hash[i]);
 #else
         putc(hash[i], stdout);
 #endif
