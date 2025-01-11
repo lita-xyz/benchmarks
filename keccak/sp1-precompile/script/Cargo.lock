@@ -2672,6 +2672,7 @@ version = "0.1.0"
 dependencies = [
  "ark-std 0.4.0",
  "sp1-build",
+ "sp1-core-machine",
  "sp1-sdk",
 ]
 

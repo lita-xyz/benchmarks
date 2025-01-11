@@ -103,6 +103,7 @@ version = "0.1.0"
 dependencies = [
  "hex",
  "sha3",
+ "sp1-derive",
  "sp1-zkvm",
 ]
 
@@ -198,7 +199,7 @@ checksum = "de523f781f095e28fa605cdce0f8307e451cc0fd14e2eb4cd2e98a355b147766"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.87",
 ]
 
 [[package]]
@@ -222,6 +223,15 @@ dependencies = [
 ]
 
 [[package]]
+name = "sp1-derive"
+version = "3.0.0"
+source = "git+https://github.com/succinctlabs/sp1.git?tag=v3.0.0#ff8f482c3e135f1a1f325d639fb6fc8c383407f2"
+dependencies = [
+ "quote",
+ "syn 1.0.109",
+]
+
+[[package]]
 name = "sp1-lib"
 version = "3.0.0"
 source = "git+https://github.com/succinctlabs/sp1.git?tag=v3.0.0#ff8f482c3e135f1a1f325d639fb6fc8c383407f2"
@@ -242,6 +252,17 @@ dependencies = [
  "rand",
  "sha2",
  "sp1-lib",
+]
+
+[[package]]
+name = "syn"
+version = "1.0.109"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "72b64191b275b66ffe2469e8af2c1cfe3bafa67b529ead792a6d0160888b4237"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "unicode-ident",
 ]
 
 [[package]]
@@ -297,5 +318,5 @@ checksum = "fa4f8080344d4671fb4e831a13ad1e68092748387dfc4f55e356242fae12ce3e"
 dependencies = [
  "proc-macro2",
  "quote",
- "syn",
+ "syn 2.0.87",
 ]
