@@ -14,7 +14,6 @@ valida_rs::entrypoint!(main);
 pub fn main() {
     let input: &[u8] = &[5u8; 32];
     let output = keccak(input);
-    let output_hex = hex::encode(output);
 
-    valida_rs::io::println(&output_hex);
+    println!("{:?}", &output);
 }
