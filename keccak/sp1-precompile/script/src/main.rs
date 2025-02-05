@@ -5,7 +5,14 @@ use ark_std::{end_timer, start_timer};
 
 const ELF: &[u8] = include_bytes!("../../program/elf/riscv32im-succinct-zkvm-elf");
 
+fn init_logger() {
+    std::env::set_var("RUST_LOG", "info");
+    sp1_core_machine::utils::setup_logger();
+}
+
 fn main() {
+    init_logger();
+
     // Generate proof.
     let stdin = SP1Stdin::new();
     let client = ProverClient::new();
