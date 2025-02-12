@@ -1,5 +1,3 @@
-#![no_main]
-
 use std::io::Write;
 
 use sha3::{Digest, Keccak256};
@@ -10,8 +8,6 @@ fn keccak(input: &[u8]) -> [u8; 32] {
     let result = hasher.finalize();
     Into::<[u8; 32]>::into(result)
 }
-
-valida_rs::entrypoint!(main);
 
 pub fn main() {
     let input: &[u8] = &[5u8; 32];
