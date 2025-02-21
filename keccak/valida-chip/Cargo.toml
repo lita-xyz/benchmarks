@@ -1,0 +1,8 @@
+[package]
+name = "keccak"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+hex = "0.4.3"
+sha3 = { git = "https://github.com/lita-xyz/hashes", default-features = false }
