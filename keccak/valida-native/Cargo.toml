@@ -4,6 +4,5 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-valida-rs = { git = "https://github.com/lita-xyz/valida-rs.git", branch = "main" }
 hex = "0.4.3"
 sha3 = { version = "0.10.8", default-features = false }
