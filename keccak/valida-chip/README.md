@@ -1,6 +1,6 @@
 # Keccak in Valida
 
-This is a simple program that calls keccak on an input file in Valida.
+This is a simple program that calls keccak on an input file in Valida. This version calls Valida's custom keccak chip directly for the permutation.
 
 ## System requirements
 
