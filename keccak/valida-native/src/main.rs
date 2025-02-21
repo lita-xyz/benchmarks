@@ -10,9 +10,11 @@ fn keccak(input: &[u8]) -> [u8; 32] {
 }
 
 pub fn main() {
-    let input: &[u8] = &[5u8; 32];
-    let output = keccak(input);
-    let output_hex = hex::encode(output);
-
+    let mut output_hex: String = String::new();
+    for _i in 0..1000 {
+        let input: &[u8] = &[5u8; 32];
+        let output = keccak(input);
+        output_hex = hex::encode(output);
+    }
     std::io::stdout().write_all(output_hex.as_bytes()).unwrap();
 }
