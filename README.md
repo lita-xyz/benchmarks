@@ -1,3 +1,1 @@
-## Issue reporting
-
-Any issues report at https://github.com/lita-xyz/valida-releases/issues
+This repo is archived and is no longer being updated. Up-to-date benchmark source files are included with Valida releases within the benchmark directory.
