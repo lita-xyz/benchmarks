@@ -6,6 +6,8 @@ edition = "2021"
 
 [dependencies]
 sp1-sdk = { git = "https://github.com/succinctlabs/sp1.git", tag = "v3.0.0" }
+sp1-core-machine = { git = "https://github.com/succinctlabs/sp1.git", tag = "v3.0.0" }
+
 ark-std = "0.4"
 
 [build-dependencies]
